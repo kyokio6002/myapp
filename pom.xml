@@ -4,11 +4,11 @@
   <modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>test</artifactId>
+	<artifactId>myapp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-	<name>test</name>
+	<name>myapp</name>
 	<description>test project for Spring Boot</description>
 
 	<parent>
@@ -111,13 +111,13 @@
     </resources>
     <testResources>
       <testResource>
-        <directory>src/test/java</directory>
+        <directory>src/myapp/java</directory>
         <excludes>
           <exclude>**/*.java</exclude>
         </excludes>
       </testResource>
       <testResource>
-        <directory>src/test/resources</directory>
+        <directory>src/myapp/resources</directory>
       </testResource>
     </testResources>
 	</build>
