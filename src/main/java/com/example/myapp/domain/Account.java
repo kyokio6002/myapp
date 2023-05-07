@@ -3,15 +3,15 @@ package com.example.myapp.domain;
 public class Account{
 
     private String userId;
-    private String emailAdress;
+    private String emailAddress;
 
     public Account(){
         this("guest", "none");
     }
 
-    public Account(String userId, String emailAdress){
+    public Account(String userId, String emailAddress){
         this.userId = userId;
-        this.emailAdress = emailAdress;
+        this.emailAddress = emailAddress;
     }
 
     public String getUserId(){
@@ -22,11 +22,11 @@ public class Account{
         this.userId = userId;
     }
 
-    public String getEmailAdress(){
-        return this.emailAdress;
+    public String getEmailAddress(){
+        return this.emailAddress;
     }
 
-    public void setEmailAdress(String emailAdress){
-        this.emailAdress = emailAdress;
+    public void setEmailAddrdess(String emailAddress){
+        this.emailAddress = emailAddress;
     }
 }

@@ -3,20 +3,21 @@
 
 <mapper namespace="com.example.myapp.repository.mybatis.AccountMapper">
 
-  <resultMap id="users" type="com.example.myapp.domain.Account">
-    <id property="accountId" column="user_id"/>
-    <result property="emailAdress" column="email_adress"/>
+  <!-- domain/Accountとカラムをマッピングする -->
+  <resultMap id="Account" type="com.example.myapp.domain.Account">
+    <id property="userId" column="user_id"/>
+    <result property="emailAddress" column="email_address"/>
   </resultMap>
 
-  <select id="get" resultMap="users">
+  <select id="find" resultMap="Account">
     select * from users
     <where>
-      <if test="userId!=null">
-        user_id=#{userId}
+      <if test="accountId!=null">
+        user_id=#{accountId}
       </if>
 
-      <if test="emailAdress!=null">
-        and email_adress=#{emailAdress}
+      <if test="emailAddress!=null">
+        and email_address=#{emailAddress}
       </if>
     </where>
   </select>

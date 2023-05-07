@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface AccountRepository{
 
-    public List<Account> find(String accountId, String emailAdress);
+    public List<Account> findList(String accountId, String emailAddress);
 }

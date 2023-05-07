@@ -12,13 +12,14 @@ import com.example.myapp.repository.mybatis.AccountMapper;
 public class AccountRepositoryImpl implements AccountRepository{
 
     private final SqlSessionTemplate sqlSessionTemplate;
+
     public AccountRepositoryImpl(SqlSessionTemplate sqlSessionTemplate){
         this.sqlSessionTemplate = sqlSessionTemplate;
     }
 
     @Override
-    public List<Account> find(String accountId, String emailAdress){
-        return sqlSessionTemplate.getMapper(AccountMapper.class).find(accountId, emailAdress);
+    public List<Account> findList(String accountId, String emailAddress){
+        return this.sqlSessionTemplate.getMapper(AccountMapper.class).find(accountId, emailAddress);
     }
 
 }

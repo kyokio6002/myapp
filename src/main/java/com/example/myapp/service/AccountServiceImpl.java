@@ -18,6 +18,6 @@ public class AccountServiceImpl implements AccountService{
 
     @Override
     public List<Account> find(String accountId, String emailAdress){
-        return accountRepository.find(accountId, emailAdress);
+        return accountRepository.findList(accountId, emailAdress);
     }
 }
